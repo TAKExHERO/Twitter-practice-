@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Twitter</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <header>
+    <ul>
+      <li><%= link_to "ホーム", root_path %></li>
+      <li><a href="#">通知</a></li>
+      <li><a href="#">メッセージ</a></li>
+      <li><%= link_to "ツイートする", new_blog_path %></li>
+      <li><%= link_to "ツイート一覧", blogs_path %></li>
+    </ul>
+  </header>
+
+<%= yield %>
+
+
+<div id="page-top-btn" class="page-top-btn">
+    <p><a class="move-page-top" id="move-page-top">▲</a></p>
+</div>
+
+  <footer>
+    <p>Made by T.Y</p>
+    <p>© 2015-2016 Copyright T.Y</p>
+  </footer>
+
+</body>
+</html>
