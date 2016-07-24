@@ -6,6 +6,8 @@ Rails.application.routes.draw do
     end
   end
   
+  match "blogs/new", :via => :post
+  
   root 'blogs#index'
 
 end
